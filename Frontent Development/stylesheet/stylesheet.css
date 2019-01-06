@@ -22,30 +22,16 @@ h2{
     color: white;
     font-size: 1.2em;
     padding: 0.85em;
+    text-align: left;
     text-transform: uppercase;
 }
 
 h3{
     font-family: sans-serif;
     font-weight: 600;
-    margin-top: 2em;
-    margin-left: 1em;
+    margin: 2em 1em 1em 1em;
     text-align: left;
 }
-
-
-div section h1{
-    font-size: 1.6em;
-    margin-top: 2em;
-}
-
-div section h4{
-    margin-top: -1em;
-    margin-left: 1em;
-    text-align: left;
-    opacity: 0.8;
-}
-
 
 
 h4 p{
@@ -119,36 +105,16 @@ h1 p + p{
 
 }
 
-main img + div {
-    background-color: hsla(0,100%,0%,0.65);
-    color: white;
-    height: 12.5em;
-    margin-top: -12.5em;
-    position: absolute;
-    width: 101%;
-}
-
 h3 p {
     display: inline;
     font-family: "Work Sans";
     font-size: 0.8em;
-    margin-left: 0.2em;
+    margin-left: -0.2em;
     margin-top: -0.5em;
 }
 
 
 
-
-
-
-
-
-main img{
-    display: block;
-    height: 13em;
-    object-fit: cover;
-    width: 100%;
-}
 
 
 
@@ -223,6 +189,48 @@ form + input {
 
 
 
+
+
+
+main img{
+    display: block;
+    object-fit: cover;
+    margin: 0em;
+    max-height: 15em;
+}
+
+main img + div {
+    background-color: hsla(0,100%,0%,0.6);
+    color: white;
+    height: 15em;
+    margin-top: -15em;
+    position: absolute;
+    width: 100%;
+}
+
+
+div section h1{
+    font-size: 1.6em;
+    margin-left: 0.7em;
+    margin-top: 3em;
+}
+
+div section h4{
+    margin-top: -1em;
+    margin-left: 1.3em;
+    max-width: 25em;
+    text-align: left;
+    opacity: 0.8;
+}
+
+
+
+
+main article img{
+    height: 11em!important;
+    width: 100%;
+}
+
 article{
     border-color: lightgray;
     border-style: solid;
@@ -230,6 +238,11 @@ article{
     margin: 1em;
     text-align: left;
 }
+
+
+
+
+
 
 
 
@@ -251,4 +264,81 @@ footer p{
 footer img{
     margin-top: 1em;
     width: 10em;
+}
+
+
+
+
+
+@media only screen and (min-width: 48.75em) {
+    section section div{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+    section section{
+    margin-left: auto;
+    margin-right: auto;
+    width: 48.75em;
+    }
+
+    article{
+    margin: 0.5em;
+}
+
+    #sfmenu{
+    margin-left: auto;
+    margin-right: auto;
+    width: 46em;
+    }
+
+}
+
+@media only screen and (min-width: 66.5em) {
+    section section div{
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+    section section{
+    margin-left: 1em;
+    margin-right: 1em;
+    width: auto;
+    }
+
+    main img + div {
+    padding-left: 32em;
+    }
+
+
+    #sfmenu{
+    position: absolute;
+    float: left;
+    margin-left: 1em;
+    margin-top: -27em;
+    width: 30em;
+    z-index: 10;
+    }
+
+    main img{
+    max-height: 29em;
+}
+
+    main img + div {
+    height: 29em !important;
+    width: 100%;
+    margin-top: -29em;
+}
+
+}
+
+
+
+@media only screen and (min-width: 75em) {
+    section section{
+    margin-left: auto;
+    margin-right: auto;
+    width: 74em;
+    }
+
+
 }
