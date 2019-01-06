@@ -1,147 +1,167 @@
 <!DOCTYPE html>
 <html lang="nl">
+
 <head>
     <meta charset="UTF-8">
     <title>WOW stories</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="stylesheet/stylesheet.css">
     <link href="https://fonts.googleapis.com/css?family=Work+Sans:200" rel="stylesheet">
 </head>
 
 <body>
     <header>
-       <nav> <a href="https://wowair.nl/?gclid=EAIaIQobChMIp9O46aX33gIVBOR3Ch3xogZtEAAYASAAEgISwvD_BwE"> <img src="https://valholl-prd.wowair.com/css/i/sitelogo.svg" alt="Logo"></a> </nav>
-        <h1>99 WOW-verhalen</h1>
-           <p>Vind hier ontzettend leuke verhalen voor op reis.</p>
+        <nav>
+            <div>
+                <a href="https://wowair.nl/manage/">
+        <img src="images/inloggen.svg" alt="Inlogknop">
+        </a>
+            </div>
 
-            <form action="http://www.example.org/search.php">
-               <p>Zoeken:</p>
-               <input type="search" name="search" placeholder="Naam, gevoel, kleur.." />
-               <input type="submit" value="Zoek"/>
-           </form>
+            <a href="https://wowair.nl/?gclid=EAIaIQobChMIp9O46aX33gIVBOR3Ch3xogZtEAAYASAAEgISwvD_BwE"> <img src="images/sitelogo.svg" alt="Logo"></a>
+
+            <a href="https://wowair.nl/manage/">
+        <img src="images/zoeken.svg" alt="Inlogknop">
+        </a>
+        </nav>
+
+        <form action="http://www.example.org/search.php">
+            <p>Zoeken: <input type="search" name="search" placeholder="Naam, gevoel, kleur.." />
+                <input type="submit" value="Zoek" /></p>
+        </form>
+        // zit er nu onder
+
 
     </header>
 
     <main>
-        <section >
-           <h2>Favoriete verhalen deze week</h2>
-            <div>
-               <article>
-                <h3>Telegrafisch</h3>
-                <img src="" alt="">
-                <p> tekst </p>
-                <i class="far fa-heart"></i>
-            </article>
-
-            <article>
-                <h3>Eric Lucassen</h3>
-                <img src="" alt="">
-                <p> tekst </p>
-                <i class="far fa-heart"></i>
-            </article>
-
-            <article>
-                <h3>Verliefd</h3>
-                <img src="" alt="">
-                <p> tekst </p>
-                <i class="fas fa-heart"></i>
-            </article>
-            </div>
-        </section>
+        <img src="images/lepra.svg" alt="Verhaal van de dag">
 
 
-       <section>
-        <h2>Sorteren</h2>
-            <form action="http://www.example.org/search.php">
-            <select name="sorteer" id="sorteren">
+        <div>
+            <section>
+                <h1>
+                    <p>WOW</p>
+                    <p>Vandaag</p>
+                </h1>
+                <div>
+                    <h4><p>Verhaal van de dag:</p> "Presentator die ten onrechte denkt aansluiting te hebben gevonden bij de 'kids'"</h4>
+                </div>
+            </section>
+        </div>
+
+        <div id="sfmenu">
+            <section>
+                <div>
+                    <h2>Sorteren</h2>
+                    <form action="http://www.example.org/search.php">
+                        <select name="sorteer">
                 <option value="populariteit oplopend">Populariteit oplopend</option>
                 <option value="populariteit aflopend">Populariteit aflopend</option>
                 <option value="nummering oplopend">Nummering oplopend</option>
                 <option value="nummering aflopend">Nummering aflopend</option>
                 </select>
-            </form>
+                    </form>
+                </div>
+            </section>
+
+            <section>
+                <div>
+                    <h2>Filteren</h2>
+                    <p>Tekstvorm</p>
+                    <div>
+                        <label> Dialoog (25) <input type="checkbox" name="tekstvorm" value="dialoog"></label>
+                        <label> Gedicht (15) <input type="checkbox" name="tekstvorm" value="gedicht" ></label>
+
+                        <label> Haiku (1) <input type="checkbox" name="tekstvorm" value="haiku"></label>
+                        <label> Verhaal (58) <input type="checkbox" name="tekstvorm" value="verhaal"></label>
+                    </div>
+
+                    <p>Onderwerp</p>
+                    <div>
+                        <label> Emotie (16) <input type="checkbox" name="tekstvorm" value="dialoog"></label>
+                        <label> Object (34) <input type="checkbox" name="tekstvorm" value="gedicht" ></label>
+                        <label> Persoon (27) <input type="checkbox" name="tekstvorm" value="haiku"></label>
+                        <label> Situatie (22) <input type="checkbox" name="tekstvorm" value="verhaal"></label>
+                    </div>
 
 
-        <h2>Filteren</h2>
-            <p>Tekstvorm</p>
-            <label> <input type="checkbox" name="tekstvorm" value="dialoog">Dialoog</label>
-            <label> <input type="checkbox" name="tekstvorm" value="gedicht" id="gedicht">Gedicht</label>
-            <label> <input type="checkbox" name="tekstvorm" value="haiku">Haiku</label>
-            <label> <input type="checkbox" name="tekstvorm" value="verhaal">Verhaal</label>
+                    <p>Sfeer/emotie</p>
+                    <form action="http://www.example.org/search.php">
+                        <select name="sorteer">
+                <option value="Alle">Alle</option>
+                <option value="Angst">Angst</option>
+                <option value="Blijdschap">Blijdschap</option>
+                <option value="Boos">Boos</option>
+                <option value="Verdriet">Verdriet</option>
+                <option value="Verliefd">Verliefd</option>
+                <option value="Zweverig">Zweverig</option>
+                </select>
+                    </form>
 
-
-            <p>Sfeer/emotie verhaal</p>
-            <label> <input type="checkbox" name="sfeer" value="angstig"> Angst</label>
-            <label> <input type="checkbox" name="sfeer" value="blijdschap" id="blijdschap"> Blijdschap</label>
-            <input type="checkbox" name="sfeer" value="boos" id="boos">
-            <label for="boos">Boos</label>
-            <input type="checkbox" name="sfeer" value="verdrietig" id="verdrietig">
-            <label for="verdrietig">Verdriet</label>
-            <input type="checkbox" name="sfeer" value="verliefd" id="verliefd">
-            <label for="verliefd">Verliefd</label>
-
-
-
-
-       </section>
-
-
-        <section>
-           <h2>Alle dialogen</h2>
-            <div>
-               <article>
-                <h3>Dialoog 1</h3>
-                <img src="" alt="">
-                <p> tekst </p>
-            </article>
-
-            <article>
-                <h3>Dialoog 2</h3>
-                <img src="" alt="">
-                <p> tekst </p>
-            </article>
-
-            <article>
-                <h3>Dialoog 3</h3>
-                <img src="" alt="">
-                <p> tekst </p>
-            </article>
-            </div>
-
-        </section>
-
-
-        <section>
-           <h2>Alle gedichten</h2>
-           <div>
-            <article>
-                <h3>Gedicht 1</h3>
-                <img src="" alt="">
-                <p> tekst </p>
-            </article>
-
-            <article>
-                <h3>Gedicht 2</h3>
-                <img src="" alt="">
-                <p> tekst </p>
-            </article>
-
-            <article>
-                <h3>Gedicht 3</h3>
-                <img src="" alt="">
-                <p> tekst </p>
-            </article>
+                    <input type="image" src="images/zoeken1.svg" alt="Zoekknop">
+                </div>
+            </section>
         </div>
 
+        <section>
+            <h3>99 WOW-verhalen <p>Vind hier ontzettend leuke verhalen voor op reis.</p></h3>
+
         </section>
+
+
+        <section>
+            <section>
+                <div id="grid">
+                    <article>
+                        <img src="images/breed.svg" alt="">
+                        <h5>Alzheimer</h5>
+                        <p> #Verward #Dialoog #Situatie </p>
+                    </article>
+
+                    <article>
+                        <img src="images/eenzaam.svg" alt="">
+                        <h5>Eenzaam</h5>
+                        <p> #Verdriet #Verhaal #Persoon </p>
+                    </article>
+
+                    <article>
+                        <img src="images/overdreven.svg" alt="">
+                        <h5>Overdreven</h5>
+                        <p> #Blijdschap #Verhaal #Situatie </p>
+                    </article>
+                    <article>
+                        <img src="images/breed.svg" alt="">
+                        <h5>Presentator die ten onrechte denkt aansluiting te hebben gevonden bij de 'kids'</h5>
+                        <p> #Verward #Dialoog #Situatie </p>
+                    </article>
+
+                    <article>
+                        <img src="images/eenzaam.svg" alt="">
+                        <h5>Eenzaam</h5>
+                        <p> #Verdriet #Verhaal #Persoon </p>
+                    </article>
+
+                    <article>
+                        <img src="images/overdreven.svg" alt="">
+                        <h5>Overdreven</h5>
+                        <p> #Blijdschap #Verhaal #Situatie </p>
+                    </article>
+
+                </div>
+            </section>
+        </section>
+
+
+
 
 
     </main>
 
     <footer>
-        <a href="Logo"> WOW air</a>
-        <p>Voor vragen: neem contact op met....</p>
+        <a href="Logo"> <img src="images/p2_947278.png" alt="logo"></a>
+        <p>Klik op bovenstaand logo om naar de officiële site verwezen te worden. Hier kunt u contact opnemen.</p>
     </footer>
 
 

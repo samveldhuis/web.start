@@ -1,19 +1,254 @@
-body {
+body{
+    background-color: white;
+    font-family: "Work sans", sans-serif;
+    margin: 0em;
     text-align: center;
-    font-family: 'Work Sans', sans-serif;
-    font-size: 1em;
 }
 
-h2 {
+
+
+
+
+h1{
+    font-family: sans-serif;
+    font-size: 1.3em;
+    font-weight: 300;
+    margin-left: 0.5em;
+    text-align: left;
+}
+
+h2{
+    background-color: #a22384;
+    color: white;
+    font-size: 1.2em;
+    padding: 0.85em;
     text-transform: uppercase;
-    font-size: 1.4em;
 }
 
-section h2 ~ div {
-    border: 1px solid black;
+h3{
+    font-family: sans-serif;
+    font-weight: 600;
+    margin-top: 2em;
+    margin-left: 1em;
+    text-align: left;
+}
+
+
+div section h1{
+    font-size: 1.6em;
+    margin-top: 2em;
+}
+
+div section h4{
+    margin-top: -1em;
+    margin-left: 1em;
+    text-align: left;
+    opacity: 0.8;
+}
+
+
+
+h4 p{
+    display: inline;
+    font-family: sans-serif;
+    font-weight: 500;
+}
+
+h5{
+    font-size: 1.5em;
+    margin: 0.5em 0em -0.5em 0.7em;
+}
+
+h5 + p{
+    margin-left: 1em;
+}
+
+p{
+    text-align: left;
+    font-weight: 600;
+}
+
+
+
+
+
+nav{
+    background-color: white;
+    border-bottom: solid;
+    border-bottom-color: #90afae;
+    border-bottom-width: 0.06em;
+    height: 4.8em;
+    margin-top: -1em;
+    position: fixed;
+    width: 100%;
+    z-index: 5;
+}
+
+nav img{
+    margin-top: 1em;
+    width: 4.4em;
+}
+
+nav div a img {
+    float: left;
+    margin: 1.2em 1em;
+    width: 3.3em;
+}
+
+a + a img {
+    float: right;
+    margin: 1.2em 1em;
+    width: 3.3em;
+}
+
+
+
+
+
+h1 p{
+    color: #f5c300;
+    display: inline;
+    font-size: 1.85em;
+    font-weight: 500;
+}
+
+h1 p + p{
+    color: white;
+    text-transform: uppercase;
+    opacity: 0.7;
+
+}
+
+main img + div {
+    background-color: hsla(0,100%,0%,0.65);
+    color: white;
+    height: 12.5em;
+    margin-top: -12.5em;
+    position: absolute;
+    width: 101%;
+}
+
+h3 p {
+    display: inline;
+    font-family: "Work Sans";
+    font-size: 0.8em;
+    margin-left: 0.2em;
+    margin-top: -0.5em;
+}
+
+
+
+
+
+
+
+
+main img{
+    display: block;
+    height: 13em;
+    object-fit: cover;
+    width: 100%;
+}
+
+
+
+
+
+#sfmenu section div p{
+    color: #a22384;
+    font-family: sans-serif;
+    font-size: 0.8em;
+    font-weight: bolder;
+    margin-left: 1em;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+#sfmenu{
+    background-color: #fbfbfb;
+    border-color: gainsboro;
+    border-style: solid;
+    border-width: 0.06em;
+    box-shadow: 0.3em 0.3em #f2f2f2;
+    margin: 1em;
+    padding: 0.5em;
+}
+
+
+section div div{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+}
+
+form select{
+    background-color: white;
+    border-color: gainsboro;
+    color: #303030;
+    font-family: "Helvetica Neue";
+    font-size: 0.85em;
+    font-weight: 300;
+    height: 3.2em;
+    margin-bottom: 1em;
+    width: 97%;
+}
+
+label{
+    background-color: white;
+    border-color: gainsboro;
+    border-radius: 0.15em;
+    border-style: solid;
+    border-width: 0.06em;
+    font-family: "Helvetica Neue";
+    font-size: 0.85em;
+    font-weight: 300;
+    margin: 0.5em;
+    padding: 0.8em 0.8em;
+    text-align: left;
+}
+
+input{
+    float: right;
+    margin-left: auto;
+}
+
+form + input {
+    display: block;
+    float: none;
+    width: 11em;
 }
 
 
 
+
+
+
+
+article{
+    border-color: lightgray;
+    border-style: solid;
+    border-width: 0.06em;
+    margin: 1em;
+    text-align: left;
+}
+
+
+
+
+
+footer{
+    background-color: #F7F1E9;
+    padding: 1em;
+}
+
+footer p{
+    font-size: 0.8em;
+    margin-left: auto;
+    margin-right: auto;
+    width: 25em;
+    text-align: center;
+}
+
+footer img{
+    margin-top: 1em;
+    width: 10em;
+}
