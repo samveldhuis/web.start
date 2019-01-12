@@ -21,35 +21,32 @@
 
             <a href="https://wowair.nl/?gclid=EAIaIQobChMIp9O46aX33gIVBOR3Ch3xogZtEAAYASAAEgISwvD_BwE"> <img src="images/sitelogo.svg" alt="Logo"></a>
 
-            <a href="https://wowair.nl/manage/">
-        <img src="images/zoeken.svg" alt="Inlogknop">
-        </a>
+            <img class="zoekImg" src="images/zoeken.svg" alt="Inlogknop">
         </nav>
-
-        <form action="http://www.example.org/search.php">
-            <p>Zoeken: <input type="search" name="search" placeholder="Naam, gevoel, kleur.." />
-                <input type="submit" value="Zoek" /></p>
-        </form>
-        // zit er nu onder
-
 
     </header>
 
     <main>
-        <img id="tijdelijk" src="images/lepra.svg" alt="Verhaal van de dag">
+        <form class="zoeken" action="http://www.example.org/search.php">
+            <input type="search" name="search" placeholder="Zoek op naam, emotie, trefwoord.." />
+            <input type="submit" value="Zoek" />
+        </form>
 
+        <div id="wowvandaag">
+            <img src="images/lepra.svg" alt="Verhaal van de dag">
 
-        <div>
-            <section>
-                <h1>
-                    <p>WOW </p>
-                    <p>Vandaag</p>
-                </h1>
-                <div>
-                    <h4>
-                        <p>Verhaal van de dag:</p> "Presentator die ten onrechte denkt aansluiting te hebben gevonden bij de 'kids'"</h4>
-                </div>
-            </section>
+            <div>
+                <section id="blur">
+                    <h1>
+                        <span>WOW </span>
+                        <span>Vandaag</span>
+                    </h1>
+                    <div>
+                        <h4>
+                            <span>Verhaal van de dag:</span> "Presentator die ten onrechte denkt aansluiting te hebben gevonden bij de 'kids'"</h4>
+                    </div>
+                </section>
+            </div>
         </div>
 
         <div id="sfmenu">
@@ -88,16 +85,17 @@
                     </div>
 
 
-                    <p>Sfeer/emotie</p>
+                    <p>Schrijfstijl</p>
                     <form action="http://www.example.org/search.php">
                         <select name="sorteer">
-                <option value="Alle">Alle</option>
-                <option value="Angst">Angst</option>
-                <option value="Blijdschap">Blijdschap</option>
-                <option value="Boos">Boos</option>
-                <option value="Verdriet">Verdriet</option>
-                <option value="Verliefd">Verliefd</option>
-                <option value="Zweverig">Zweverig</option>
+                <option value="alle">Alle</option>
+                <option value="bekende personen">Bekende personen (18)</option>
+                <option value="literatuur">Literatuur (9)</option>
+                <option value="poezie">Poëzie (5)</option>
+                <option value="nabootsend">Nabootsend (27)</option>
+                <option value="somber">Somber (3)</option>
+                <option value="verhalend">Verhalend (20)</option>
+                <option value="Zweverig">Zweverig (3)</option>
                 </select>
                     </form>
 
@@ -106,85 +104,87 @@
             </section>
         </div>
 
+        <div class="bericht" onclick="myFunction()">Downloadbutton
+            <span class="berichttekst" id="myPopup">Vergeet mij niet op andere devices te downloaden</span>
+        </div>
+
 
         <section>
-            <section>
-                <h3>99 WOW-verhalen
-                    <p>Vind hier ontzettend leuke verhalen voor op reis.</p>
-                </h3>
-                <div>
-                    <article>
-                        <img src="images/breed.svg" alt="">
-                        <h5>Alzheimer</h5>
-                        <p> #Verward #Dialoog #Situatie </p>
-                    </article>
+            <h3>99 WOW-verhalen
+                <span>Vind hier ontzettend leuke verhalen voor op reis.</span>
+            </h3>
+            <div>
+                <article>
+                    <img src="images/breed.svg" alt="">
+                    <h5>Alzheimer</h5>
+                    <p> #Verward #Dialoog #Situatie </p>
+                </article>
 
-                    <article>
-                        <img src="images/eenzaam.svg" alt="">
-                        <h5>Eenzaam</h5>
-                        <p> #Verdriet #Verhaal #Persoon </p>
-                    </article>
+                <article>
+                    <img src="images/eenzaam.svg" alt="">
+                    <h5>Eenzaam</h5>
+                    <p> #Verdriet #Verhaal #Persoon </p>
+                </article>
 
-                    <article>
-                        <img src="images/overdreven.svg" alt="">
-                        <h5>Overdreven</h5>
-                        <p> #Blijdschap #Verhaal #Situatie </p>
-                    </article>
-                    <article>
-                        <img src="images/breed.svg" alt="">
-                        <h5>Presentator die ten onrechte denkt aansluiting te hebben gevonden bij de 'kids'</h5>
-                        <p> #Verward #Dialoog #Situatie </p>
-                    </article>
+                <article>
+                    <img src="images/overdreven.svg" alt="">
+                    <h5>Overdreven</h5>
+                    <p> #Blijdschap #Verhaal #Situatie </p>
+                </article>
+                <article>
+                    <img src="images/breed.svg" alt="">
+                    <h5>Presentator die ten onrechte denkt aansluiting te hebben gevonden bij de 'kids'</h5>
+                    <p> #Verward #Dialoog #Situatie </p>
+                </article>
 
-                    <article>
-                        <img src="images/eenzaam.svg" alt="">
-                        <h5>Eenzaam</h5>
-                        <p> #Verdriet #Verhaal #Persoon </p>
-                    </article>
+                <article>
+                    <img src="images/eenzaam.svg" alt="">
+                    <h5>Eenzaam</h5>
+                    <p> #Verdriet #Verhaal #Persoon </p>
+                </article>
 
-                    <article>
-                        <img src="images/overdreven.svg" alt="">
-                        <h5>Overdreven</h5>
-                        <p> #Blijdschap #Verhaal #Situatie </p>
-                    </article>
+                <article>
+                    <img src="images/overdreven.svg" alt="">
+                    <h5>Overdreven</h5>
+                    <p> #Blijdschap #Verhaal #Situatie </p>
+                </article>
 
-                    <article>
-                        <img src="images/breed.svg" alt="">
-                        <h5>Alzheimer</h5>
-                        <p> #Verward #Dialoog #Situatie </p>
-                    </article>
+                <article>
+                    <img src="images/breed.svg" alt="">
+                    <h5>Alzheimer</h5>
+                    <p> #Verward #Dialoog #Situatie </p>
+                </article>
 
-                    <article>
-                        <img src="images/eenzaam.svg" alt="">
-                        <h5>Eenzaam</h5>
-                        <p> #Verdriet #Verhaal #Persoon </p>
-                    </article>
+                <article>
+                    <img src="images/eenzaam.svg" alt="">
+                    <h5>Eenzaam</h5>
+                    <p> #Verdriet #Verhaal #Persoon </p>
+                </article>
 
-                    <article>
-                        <img src="images/overdreven.svg" alt="">
-                        <h5>Overdreven</h5>
-                        <p> #Blijdschap #Verhaal #Situatie </p>
-                    </article>
+                <article>
+                    <img src="images/overdreven.svg" alt="">
+                    <h5>Overdreven</h5>
+                    <p> #Blijdschap #Verhaal #Situatie </p>
+                </article>
 
-                    <article>
-                        <img src="images/breed.svg" alt="">
-                        <h5>Alzheimer</h5>
-                        <p> #Verward #Dialoog #Situatie </p>
-                    </article>
+                <article>
+                    <img src="images/breed.svg" alt="">
+                    <h5>Alzheimer</h5>
+                    <p> #Verward #Dialoog #Situatie </p>
+                </article>
 
-                    <article>
-                        <img src="images/eenzaam.svg" alt="">
-                        <h5>Eenzaam</h5>
-                        <p> #Verdriet #Verhaal #Persoon </p>
-                    </article>
+                <article>
+                    <img src="images/eenzaam.svg" alt="">
+                    <h5>Eenzaam</h5>
+                    <p> #Verdriet #Verhaal #Persoon </p>
+                </article>
 
-                    <article>
-                        <img src="images/overdreven.svg" alt="">
-                        <h5>Overdreven</h5>
-                        <p> #Blijdschap #Verhaal #Situatie </p>
-                    </article>
-                </div>
-            </section>
+                <article>
+                    <img src="images/overdreven.svg" alt="">
+                    <h5>Overdreven</h5>
+                    <p> #Blijdschap #Verhaal #Situatie </p>
+                </article>
+            </div>
         </section>
 
 
@@ -198,7 +198,7 @@
         <p>Klik op bovenstaand logo om naar de officiële site verwezen te worden. Hier kunt u contact opnemen.</p>
     </footer>
 
+    <script src="script/script.js"></script>
 
 </body>
-
 </html>

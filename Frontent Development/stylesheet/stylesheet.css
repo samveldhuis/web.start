@@ -5,6 +5,10 @@ body{
     text-align: center;
 }
 
+main{
+    margin-top: 4.5em;
+}
+
 
 
 
@@ -38,7 +42,7 @@ h3{
 }
 
 
-h4 p{
+h4 span{
     display: inline;
     font-family: sans-serif;
     font-weight: 500;
@@ -54,10 +58,68 @@ h5 + p{
 }
 
 p{
-    text-align: left;
     font-weight: 600;
+    text-align: left;
 }
 
+
+
+
+
+.zoeken{
+    visibility: hidden;
+    height: 0em;
+    transition: 0.5s;
+}
+
+.zoeken > [type="search"]{
+    display: none;
+}
+
+.zoeken > [type="submit"]{
+    display: none;
+}
+
+
+.zichtbaar{
+    visibility: visible;
+    height: 3.8em;
+    float: right;
+    margin-bottom: 1.2em;
+    margin-top: 0.5em;
+    width: 25em;
+}
+
+
+.zichtbaar > [type="search"]{
+    background-color: white;
+    border-color: gainsboro;
+    border-radius: 0.5em;
+    color: #303030;
+    display: inline-block;
+    font-family: "Helvetica Neue";
+    font-size: 0.85em;
+    font-weight: 300;
+    float: none;
+    height: 3em;
+    margin-bottom: 1.2em;
+    margin-left: 1em;
+    margin-top: 1.2em;
+    width: 20em;
+}
+
+.zichtbaar > [type="submit"]{
+    border-radius: 0.5em;
+    display: inline-block;
+    font-family: "Helvetica Neue";
+    font-size: 0.85em;
+    font-weight: 300;
+    height: 3em;
+    width: 6em;
+    margin-top: 1.2em;
+    margin-right: 1em;
+    margin-left: 1em;
+}
 
 
 
@@ -68,10 +130,10 @@ nav{
     border-bottom-color: #90afae;
     border-bottom-width: 0.06em;
     height: 4.8em;
-    margin-top: -1em;
     position: fixed;
+    top: 0;
     width: 100%;
-    z-index: 5;
+    z-index: 3;
 }
 
 nav img{
@@ -85,7 +147,7 @@ nav div a img {
     width: 3.3em;
 }
 
-a + a img {
+nav > img {
     float: right;
     margin: 1.2em 1em;
     width: 3.3em;
@@ -95,21 +157,21 @@ a + a img {
 
 
 
-h1 p{
+h1 span{
     color: #f5c300;
     display: inline;
     font-size: 1.85em;
     font-weight: 500;
 }
 
-h1 p + p{
+h1 span + span{
     color: white;
     text-transform: uppercase;
     opacity: 0.7;
 
 }
 
-h3 p {
+h3 span {
     display: inline;
     font-family: "Work Sans";
     font-size: 0.8em;
@@ -120,11 +182,7 @@ h3 p {
 
 
 
-
-
-
-
-#sfmenu section div p{
+div[id="sfmenu"] section div p{
     color: #a22384;
     font-family: sans-serif;
     font-size: 0.8em;
@@ -134,7 +192,7 @@ h3 p {
     text-transform: uppercase;
 }
 
-#sfmenu{
+div[id="sfmenu"]{
     background-color: #fbfbfb;
     border-color: gainsboro;
     border-style: solid;
@@ -181,7 +239,7 @@ input{
     margin-left: auto;
 }
 
-form + input {
+div form + input {
     display: block;
     float: none;
     width: 11em;
@@ -196,21 +254,27 @@ form + input {
 
 
 
-main img{
-    display: block;
-    object-fit: cover;
-    margin: 0em;
-    max-height: 15em;
-}
+
+
+
 
 main img + div {
-    background-color: hsla(0,100%,0%,0.7);
     color: white;
     height: 15em;
     margin-top: -15em;
     position: absolute;
     width: 100%;
 }
+
+main +img {
+    display: block;
+    object-fit: cover;
+    margin: 0em;
+    max-height: 15em;
+}
+
+
+
 
 
 div section h1{
@@ -275,7 +339,7 @@ footer img{
 
 
 @media only screen and (min-width: 48.75em) {
-    section section div{
+    main > section div{
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
@@ -285,7 +349,7 @@ footer img{
     width: 100.5%;
 }
 
-    section section{
+    main > section{
     margin-left: auto;
     margin-right: auto;
     width: 48.75em;
@@ -295,30 +359,34 @@ footer img{
     margin: 0.5em;
 }
 
-    #sfmenu{
+    div[id="sfmenu"]{
     margin-left: auto;
     margin-right: auto;
     width: 46em;
     }
 
-    main img + div:hover{
-    background-color: hsla(0,100%,0%,0.25);
-}
-
 }
 
 
 @media only screen and (min-width: 66.5em) {
-    section section div{
+    main > section div{
     grid-template-columns: 1fr 1fr 1fr;
 }
+
+    .zoeken{
+        width: 40em;
+    }
+
+    main > form [type="search"]{
+        width: 38em;
+    }
 
     div section h4:hover{
     opacity: 0.5;
 }
 
 
-    section section{
+    main > section{
     margin-left: 1em;
     margin-right: 1em;
     width: auto;
@@ -329,19 +397,19 @@ footer img{
     }
 
     main section h4{
-    font-size: 1.5em;
+    font-size: 1.3em;
     margin-left: 1em;
     margin-top: -0.5em;
     }
 
 
-    #sfmenu{
+    div[id="sfmenu"]{
     position: absolute;
     float: left;
     margin-left: 1em;
     margin-top: -27.5em;
     width: 30em;
-    z-index: 4;
+    z-index: 2;
     }
 
     main img{
@@ -361,11 +429,11 @@ footer img{
         display: none;
     }
 
-    #sfmenu p ~ p {
+    div[id="sfmenu"] p ~ p {
         display: none;
     }
 
-    #sfmenu div ~ form{
+    div[id="sfmenu"] div ~ form{
         display: none;
     }
 
@@ -375,11 +443,92 @@ footer img{
 
 
 @media only screen and (min-width: 75em) {
-    section section{
+    main > section{
     margin-left: auto;
     margin-right: auto;
     width: 74em;
     }
 
 
+}
+
+
+.bericht {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* The actual popup */
+.bericht .berichttekst {
+  visibility: hidden;
+  width: 14em;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 0.3em;
+  padding: 0.5em;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 25%;
+  margin-left: -80px;
+}
+
+/* Popup arrow */
+.bericht .berichttekst::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class - hide and show the popup */
+.bericht .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}
+
+
+
+
+#wowvandaag{
+    filter: blur(0.2em);
+}
+
+#wowvandaag {
+
+}
+
+#wowvandaag:hover{
+    filter: none;
+}
+
+#blur{
+    filter: blur(0.2em);
+    transition: 500ms;
+}
+
+#blur:hover{
+    filter: none;
+    transition: 500ms;
 }
