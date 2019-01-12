@@ -105,6 +105,7 @@ p{
     margin-bottom: 1.2em;
     margin-left: 1em;
     margin-top: 1.2em;
+    padding-left: 1em;
     width: 20em;
 }
 
@@ -256,9 +257,9 @@ div form + input {
 
 
 
+/* opmaak van de foto in het WOW verhaal van de dag */
 
-
-main img + div {
+main div img + div {
     color: white;
     height: 15em;
     margin-top: -15em;
@@ -266,16 +267,14 @@ main img + div {
     width: 100%;
 }
 
-main +img {
+main img[id="blur"] {
     display: block;
     object-fit: cover;
     margin: 0em;
     max-height: 15em;
 }
 
-
-
-
+/* opmaak van de tekst in het WOW verhaal van de dag */
 
 div section h1{
     font-size: 1.6em;
@@ -293,6 +292,12 @@ div section h4{
 
 
 
+
+
+
+
+
+/* opmaak van de verhalen */
 
 main article img{
     height: 11em!important;
@@ -314,7 +319,7 @@ article{
 
 
 
-
+/* opmaak van de footer */
 
 footer{
     background-color: #F7F1E9;
@@ -337,6 +342,7 @@ footer img{
 
 
 
+/* vanaf tablet */
 
 @media only screen and (min-width: 48.75em) {
     main > section div{
@@ -368,7 +374,10 @@ footer img{
 }
 
 
+/* volledig vanaf desktop */
+
 @media only screen and (min-width: 66.5em) {
+
     main > section div{
     grid-template-columns: 1fr 1fr 1fr;
 }
@@ -398,10 +407,14 @@ footer img{
 
     main section h4{
     font-size: 1.3em;
-    margin-left: 1em;
+    margin-left: 0em;
     margin-top: -0.5em;
     }
 
+    main section h1{
+    font-size: 220%;
+    margin-left:0em;
+    }
 
     div[id="sfmenu"]{
     position: absolute;
@@ -412,14 +425,14 @@ footer img{
     z-index: 2;
     }
 
-    main img{
+    main img[id="blur"]{
     max-height: 29em;
 }
 
     main img + div {
-    height: 29em !important;
+    height: 15em !important;
     width: 100%;
-    margin-top: -29em;
+    margin-top: -23em!important;
 }
 
     h1 p{
@@ -436,8 +449,6 @@ footer img{
     div[id="sfmenu"] div ~ form{
         display: none;
     }
-
-
 }
 
 
@@ -448,10 +459,14 @@ footer img{
     margin-right: auto;
     width: 74em;
     }
-
-
 }
 
+
+
+
+
+
+/* micro interactie pop up bij downloaden */
 
 .bericht {
   position: relative;
@@ -511,24 +526,27 @@ footer img{
 
 
 
-#wowvandaag{
+
+/* blur van WOWverhaal van de dag*/
+
+main > div{
+    filter: blur(0em);
+}
+
+main > div[id="wowvandaag"] [id="blur"]{
     filter: blur(0.2em);
+    transition: 600ms;
 }
 
-#wowvandaag {
 
+main > div[id="wowvandaag"]:hover [id="blur"]{
+    filter: blur(0em);
+    transition: 600ms;
 }
 
-#wowvandaag:hover{
-    filter: none;
+main > div[id="wowvandaag"]:hover [id="blur2"]{
+    filter: blur(0.18em);
+    transition: 600ms;
 }
 
-#blur{
-    filter: blur(0.2em);
-    transition: 500ms;
-}
 
-#blur:hover{
-    filter: none;
-    transition: 500ms;
-}
