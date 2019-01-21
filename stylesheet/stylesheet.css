@@ -1,18 +1,667 @@
 body {
+    background-color: white;
+    font-family: "Work sans", sans-serif;
+    margin: 0em;
     text-align: center;
-    font-family: 'Work Sans', sans-serif;
-    font-size: 1em;
 }
 
-.container3 {
-    border: 1px solid black;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+main {
+    margin-top: 4.5em;
+}
+
+
+
+
+
+h1 {
+    font-family: sans-serif;
+    font-size: 1.3em;
+    font-weight: 300;
+    margin-left: 0.5em;
+    text-align: left;
 }
 
 h2 {
+    background-color: #a22384;
+    color: white;
+    font-size: 1.2em;
+    padding: 0.85em;
+    text-align: left;
     text-transform: uppercase;
-    font-size: 1.4em;
+}
+
+h3 {
+    font-family: sans-serif;
+    font-weight: 600;
+    margin: 2em 1em 1em 1em;
+    text-align: left;
 }
 
 
+h4 span {
+    display: inline;
+    font-family: sans-serif;
+    font-weight: 500;
+}
+
+h5 {
+    font-size: 1.5em;
+    margin: 0.5em 0em -0.5em 0.7em;
+}
+
+h5 + p {
+    margin-left: 1em;
+}
+
+p {
+    font-weight: 600;
+    text-align: left;
+}
+
+
+
+
+
+.zoeken {
+    visibility: hidden;
+    height: 0em;
+    transition: 0.5s;
+}
+
+.zoeken > [type="search"] {
+    display: none;
+}
+
+.zoeken > [type="submit"] {
+    display: none;
+}
+
+
+.zichtbaar {
+    visibility: visible;
+    height: 3.8em;
+    float: right;
+    margin-bottom: 1.2em;
+    margin-top: 0.5em;
+    width: 25em;
+}
+
+
+.zichtbaar > [type="search"] {
+    background-color: white;
+    border-color: gainsboro;
+    border-radius: 0.5em;
+    color: #303030;
+    display: inline-block;
+    font-family: "Helvetica Neue";
+    font-size: 0.85em;
+    font-weight: 300;
+    float: none;
+    height: 3em;
+    margin-bottom: 1.2em;
+    margin-left: 1em;
+    margin-top: 1.2em;
+    padding-left: 1em;
+    width: 20em;
+}
+
+.zichtbaar > [type="submit"] {
+    border-radius: 0.5em;
+    display: inline-block;
+    font-family: "Helvetica Neue";
+    font-size: 0.85em;
+    font-weight: 300;
+    height: 3em;
+    width: 6em;
+    margin-top: 1.2em;
+    margin-right: 1em;
+    margin-left: 1em;
+}
+
+
+
+
+nav {
+    background-color: white;
+    border-bottom: solid;
+    border-bottom-color: #90afae;
+    border-bottom-width: 0.06em;
+    height: 4.8em;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 3;
+}
+
+
+
+nav a img {
+    margin-top: 1em;
+    width: 4.4em;
+    display: inline-block;
+    float: none;
+}
+
+img[alt="Terug"] {
+    margin-top: -0.4em;
+    margin-left: -0.75em;
+}
+
+
+nav a:first-child {
+    float: left;
+    margin: 1.2em 1em;
+    width: 3.3em;
+    height: 3em;
+    background-image: url(../images/inloggen.svg);
+    background-repeat: no-repeat;
+}
+
+nav a:first-child:hover {
+    background-image: url(../images/inloggenhover.svg);
+}
+
+
+nav a:last-child {
+    float: right;
+    margin: 1.2em 1em;
+    width: 3.3em;
+    height: 3em;
+    background-image: url(../images/zoeken.svg);
+    background-repeat: no-repeat;
+}
+
+
+nav a:last-child:hover {
+    background-image: url(../images/zoekenhover.svg);
+}
+
+
+
+
+
+h1 span {
+    color: #f5c300;
+    display: inline;
+    font-size: 1.85em;
+    font-weight: 500;
+}
+
+h1 span + span {
+    color: white;
+    text-transform: uppercase;
+    opacity: 0.7;
+
+}
+
+h3 span {
+    display: inline;
+    font-family: "Work Sans";
+    font-size: 0.8em;
+    margin-left: -0.2em;
+    margin-top: -0.5em;
+}
+
+
+
+
+legend {
+    color: #a22384;
+    font-family: sans-serif;
+    font-size: 0.8em;
+    font-weight: bolder;
+    margin-left: 1em;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+main section:nth-child(3) {
+    background-color: #fbfbfb;
+    border-color: gainsboro;
+    border-style: solid;
+    border-width: 0.06em;
+    box-shadow: 0.3em 0.3em #f2f2f2;
+    margin: 1em;
+    padding: 0.5em;
+    padding-bottom: 4em;
+}
+
+
+fieldset {
+    border: none;
+    margin: 0em;
+}
+
+form select {
+    background-color: white;
+    border-color: gainsboro;
+    color: #303030;
+    font-family: "Helvetica Neue";
+    font-size: 0.85em;
+    font-weight: 300;
+    height: 3.2em;
+    margin-left: 0.6em;
+    width: 98%;
+}
+
+
+label {
+    background-color: white;
+    border-color: gainsboro;
+    border-radius: 0.15em;
+    border-style: solid;
+    border-width: 0.06em;
+    font-family: "Helvetica Neue";
+    font-size: 0.85em;
+    font-weight: 300;
+    margin: 0.5em;
+    padding: 0.8em 0.8em;
+    text-align: left;
+}
+
+fieldset section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+input {
+    float: right;
+    margin-left: auto;
+}
+
+input:last-of-type {
+    background-color: gray;
+    color: #fff;
+    border-radius: 0.2em;
+    border: 0.03em solid #982B8D;
+    margin-top: 0.5em;
+    margin-right: 0.4em;
+    padding: 0.75em 0.75em;
+    font-size: 1em;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+form:valid input {
+    background-color: #a22384;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* opmaak van de foto in het WOW verhaal van de dag */
+
+main div img + div {
+    color: white;
+    height: 15em;
+    margin-top: -15em;
+    position: absolute;
+    width: 100%;
+}
+
+main img[id="blur"] {
+    display: block;
+    object-fit: cover;
+    margin: 0em;
+    max-height: 15em;
+}
+
+main img {
+    object-fit: cover!important;
+}
+
+/* opmaak van de tekst in het WOW verhaal van de dag */
+
+div section h1 {
+    font-size: 1.6em;
+    margin-left: 0.7em;
+    margin-top: 3em;
+}
+
+div section h4 {
+    margin-top: -1em;
+    margin-left: 1.3em;
+    max-width: 25em;
+    text-align: left;
+    opacity: 0.8;
+}
+
+
+p[id="float"] {
+    float: right;
+    margin-right: 1em;
+}
+
+a:visited {
+    color: white;
+}
+
+
+
+
+
+
+
+
+/* opmaak van de verhalen */
+
+main article img {
+    height: 11em!important;
+    width: 100%;
+}
+
+article {
+    border-color: lightgray;
+    border-style: solid;
+    border-width: 0.06em;
+    margin: 1em;
+    text-align: left;
+}
+
+
+
+
+
+
+
+
+/* opmaak van de footer */
+
+footer {
+    background-color: #F7F1E9;
+    padding: 1em;
+}
+
+footer p {
+    font-size: 0.8em;
+    margin-left: auto;
+    margin-right: auto;
+    width: 25em;
+    text-align: center;
+}
+
+footer img {
+    margin-top: 1em;
+    width: 10em;
+}
+
+
+
+
+
+
+/* vanaf tablet */
+
+@media only screen and (min-width: 48.75em) {
+    main > section div {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+
+    article:hover {
+        margin-left: -0.1em;
+        width: 100.5%;
+    }
+
+    main section:nth-child(4) {
+        margin-left: auto;
+        margin-right: auto;
+        width: 48.75em;
+    }
+
+    article {
+        margin: 0.5em;
+    }
+
+    main img {
+        object-fit: cover;
+    }
+
+    main section:nth-child(3){
+        margin-left: auto;
+        margin-right: auto;
+        width: 45.75em;
+
+}
+
+}
+
+
+/* volledig vanaf desktop */
+
+@media only screen and (min-width: 66.5em) {
+
+    main > section div {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .zoeken {
+        width: 40em;
+    }
+
+    main > form [type="search"] {
+        width: 38em;
+    }
+
+    div section h4:hover {
+        opacity: 0.5;
+    }
+
+
+    main section:nth-child(4) {
+        margin-left: 1em;
+        margin-right: 1em;
+        width: auto;
+    }
+
+    main img + div {
+        padding-left: 34em;
+    }
+
+    main section h4 {
+        font-size: 1.3em;
+        margin-left: 0em;
+        margin-top: -0.5em;
+    }
+
+    main section h1 {
+        font-size: 220%;
+        margin-left: 0em;
+    }
+
+    main section:nth-child(3) {
+        position: absolute;
+        float: left;
+        margin-left: 1em;
+        margin-top: -27.5em;
+        width: 30em;
+        z-index: 2;
+        padding-bottom: 1em;
+    }
+
+    main img[id="blur"] {
+        max-height: 29em;
+    }
+
+    main img + div {
+        height: 15em !important;
+        width: 100%;
+        margin-top: -23em!important;
+    }
+
+    h1 p {
+        font-size: 2.5em;
+    }
+
+    fieldset:nth-child(3){
+        display: none;
+    }
+
+    fieldset:nth-child(4){
+        display: none;
+    }
+
+
+    p[id="float"] {
+        float: left;
+    }
+
+    h3{
+        margin-top: 4em;
+    }
+
+
+}
+
+
+
+@media only screen and (min-width: 75em) {
+    main > section {
+        margin-left: auto;
+        margin-right: auto;
+        width: 74em;
+    }
+}
+
+
+
+
+
+
+
+img[src="images/downlbutton.svg"] {
+    max-height: 2em;
+    width: 2em;
+    float: right!important;
+    border-bottom-style: solid;
+    border-bottom-color: #f5c300;
+}
+
+div[class="bericht"] + p {
+    margin-left: 1em;
+}
+
+
+
+/* micro interactie pop up bij downloaden */
+
+.bericht {
+    position: relative;
+    float: right;
+    display: inline-block;
+    cursor: pointer;
+    margin-right: 1.5em;
+}
+
+/* The actual popup */
+
+.bericht .berichttekst {
+    border-radius: 0.3em;
+    visibility: hidden;
+    width: 14em;
+    background-color: #f5c300;
+    color: #fff;
+    text-align: center;
+    padding: 0.5em;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    margin-left: -11em;
+}
+
+/* Popup arrow */
+
+.bericht .berichttekst::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 78%;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #f5c300 transparent transparent transparent;
+}
+
+/* Toggle this class - hide and show the popup */
+
+.bericht .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+
+
+
+/* blur van WOWverhaal van de dag*/
+
+main > div {
+    filter: blur(0em);
+}
+
+main > div[id="wowvandaag"] [id="blur"] {
+    filter: blur(0.2em);
+    transition: 600ms;
+}
+
+
+main > div[id="wowvandaag"]:hover [id="blur"] {
+    filter: blur(0em);
+    transition: 600ms;
+}
+
+main > div[id="wowvandaag"]:hover [id="blur2"] {
+    filter: blur(0.18em);
+    transition: 600ms;
+}
+
+section[id="blur2"] a + p {
+    text-align: right;
+    opacity: 0.9;
+    padding-right: 1em;
+}
+
+
+
+
+
+
+
+
+
+
+
+img[src="images/ericverhaal.png"] {
+    width: 100%;
+    height: 35em!important;
+}
+
+div[id="mainverhaal"] {
+    width: 110%!important;
+    margin-left: -1.1em;
+}
+
+a[href="WOW%20stories.html"] p {
+    margin-left: 1em;
+    color: black;
+    z-index: 2;
+}
