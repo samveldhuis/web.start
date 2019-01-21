@@ -51,45 +51,50 @@
             </div>
         </div>
 
-        <div>
-            <section>
-                <div>
-                    <h2>Sorteren</h2>
-                    <form action="http://www.example.org/search.php">
-                        <select name="sorteer">
+
+
+
+        <section>
+            <form action="http://www.example.org/search.php">
+                <h2>Sorteren</h2>
+                <fieldset>
+                    <select name="sorteer">
                 <option value="populariteit oplopend">Populariteit oplopend</option>
                 <option value="populariteit aflopend">Populariteit aflopend</option>
                 <option value="nummering oplopend">Nummering oplopend</option>
                 <option value="nummering aflopend">Nummering aflopend</option>
                 </select>
-                    </form>
-                </div>
-            </section>
+                </fieldset>
+            </form>
 
-            <section>
-                <div>
-                    <h2>Filteren</h2>
-                    <p>Tekstvorm</p>
-                    <form>
-                        <label> Dialoog (25) <input type="checkbox" name="tekstvorm" value="dialoog" required></label>
+
+            <form action="http://www.example.org/search.php">
+                <h2>Filteren</h2>
+                <fieldset>
+                    <legend>Tekstvorm</legend>
+                    <section>
+                        <label> Dialoog (25) <input required type="checkbox" name="tekstvorm" value="dialoog"></label>
                         <label> Gedicht (15) <input type="checkbox" name="tekstvorm" value="gedicht" ></label>
 
                         <label> Haiku (1) <input type="checkbox" name="tekstvorm" value="haiku"></label>
                         <label> Verhaal (58) <input type="checkbox" name="tekstvorm" value="verhaal"></label>
-                    </form>
+                    </section>
+                </fieldset>
 
-                    <p>Onderwerp</p>
-                    <form>
+                <fieldset>
+                    <legend>Onderwerp</legend>
+                    <section>
                         <label> Emotie (16) <input type="checkbox" name="tekstvorm" value="dialoog"></label>
                         <label> Object (34) <input type="checkbox" name="tekstvorm" value="gedicht" ></label>
                         <label> Persoon (27) <input type="checkbox" name="tekstvorm" value="haiku"></label>
                         <label> Situatie (22) <input type="checkbox" name="tekstvorm" value="verhaal"></label>
-                    </form>
+                    </section>
+                </fieldset>
 
 
-                    <p>Schrijfstijl</p>
-                    <form action="http://www.example.org/search.php">
-                        <select name="sorteer">
+                <fieldset>
+                    <legend>Schrijfstijl</legend>
+                    <select name="sorteer">
                 <option value="alle">Alle</option>
                 <option value="bekende personen">Bekende personen (18)</option>
                 <option value="literatuur">Literatuur (9)</option>
@@ -99,11 +104,15 @@
                 <option value="verhalend">Verhalend (20)</option>
                 <option value="Zweverig">Zweverig (3)</option>
                 </select>
-                    </form>
-                    <input id="zoekknop" type="submit" value="Zoeken  >">
-                </div>
-            </section>
-        </div>
+                </fieldset>
+
+                <input id="zoekknop" type="submit" value="Zoeken  >">
+            </form>
+
+        </section>
+
+
+
 
 
 
@@ -237,4 +246,5 @@
     <script src="script/script.js"></script>
 
 </body>
+
 </html>
