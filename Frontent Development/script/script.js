@@ -14,3 +14,11 @@ function show() {
 }
 
 zoekknop.addEventListener('click', show);
+
+
+function downloadFunction() {
+  var bericht = document.getElementById("mijnPopup");
+  bericht.classList.toggle("show");
+}
+
+

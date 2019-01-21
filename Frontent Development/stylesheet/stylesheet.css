@@ -30,10 +30,6 @@ h2{
     text-transform: uppercase;
 }
 
-h2:hover{
-    background-color: #771b5d;
-}
-
 h3{
     font-family: sans-serif;
     font-weight: 600;
@@ -137,21 +133,47 @@ nav{
     z-index: 3;
 }
 
-nav img{
+
+
+nav a img {
     margin-top: 1em;
     width: 4.4em;
+    display: inline-block;
+    float: none;
 }
 
-nav div a img {
+img[alt="Terug"]{
+    margin-top: -0.4em;
+    margin-left: -0.75em;
+}
+
+
+nav a:first-child{
     float: left;
     margin: 1.2em 1em;
     width: 3.3em;
+    height: 3em;
+    background-image: url(../images/inloggen.svg);
+    background-repeat: no-repeat;
 }
 
-nav > img {
+nav a:first-child:hover{
+    background-image: url(../images/inloggenhover.svg);
+}
+
+
+nav a:last-child{
     float: right;
     margin: 1.2em 1em;
     width: 3.3em;
+    height: 3em;
+    background-image: url(../images/zoeken.svg);
+    background-repeat: no-repeat;
+    }
+
+
+nav a:last-child:hover{
+    background-image: url(../images/zoekenhover.svg);
 }
 
 
@@ -183,7 +205,7 @@ h3 span {
 
 
 
-div[id="sfmenu"] section div p{
+div section div p{
     color: #a22384;
     font-family: sans-serif;
     font-size: 0.8em;
@@ -193,7 +215,7 @@ div[id="sfmenu"] section div p{
     text-transform: uppercase;
 }
 
-div[id="sfmenu"]{
+div:nth-child(1){
     background-color: #fbfbfb;
     border-color: gainsboro;
     border-style: solid;
@@ -201,15 +223,15 @@ div[id="sfmenu"]{
     box-shadow: 0.3em 0.3em #f2f2f2;
     margin: 1em;
     padding: 0.5em;
+    padding-bottom: 4em;
 }
 
-
-section div div{
+section div form {
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
 
-form select{
+form select:first-child{
     background-color: white;
     border-color: gainsboro;
     color: #303030;
@@ -218,7 +240,8 @@ form select{
     font-weight: 300;
     height: 3.2em;
     margin-bottom: 1em;
-    width: 97%;
+    margin-left: 0.6em;
+    width: 195%;
 }
 
 label{
@@ -240,10 +263,21 @@ input{
     margin-left: auto;
 }
 
-div form + input {
-    display: block;
-    float: none;
-    width: 11em;
+input:last-of-type {
+    background-color: gray;
+    color: #fff;
+    border-radius: 0.2em;
+    border: 0.03em solid #982B8D;
+    margin-top: 0.5em;
+    margin-right: 0.4em;
+    padding: 0.75em 0.75em;
+    font-size: 1em;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+form:valid input[type=submit]{
+    background-color: #a22384;
 }
 
 
@@ -274,6 +308,10 @@ main img[id="blur"] {
     max-height: 15em;
 }
 
+main img {
+    object-fit: cover;
+}
+
 /* opmaak van de tekst in het WOW verhaal van de dag */
 
 div section h1{
@@ -288,6 +326,16 @@ div section h4{
     max-width: 25em;
     text-align: left;
     opacity: 0.8;
+}
+
+
+p[id="float"]{
+    float: right;
+    margin-right: 1em;
+}
+
+a:visited {
+    color: white;
 }
 
 
@@ -365,7 +413,7 @@ footer img{
     margin: 0.5em;
 }
 
-    div[id="sfmenu"]{
+   div:nth-child(1){
     margin-left: auto;
     margin-right: auto;
     width: 46em;
@@ -416,13 +464,14 @@ footer img{
     margin-left:0em;
     }
 
-    div[id="sfmenu"]{
+    div:nth-child(1){
     position: absolute;
     float: left;
     margin-left: 1em;
     margin-top: -27.5em;
     width: 30em;
     z-index: 2;
+    padding-bottom: 1em;
     }
 
     main img[id="blur"]{
@@ -438,17 +487,21 @@ footer img{
     h1 p{
     font-size: 2.5em;
 }
-    section div div ~ div {
+    section div form ~ form {
         display: none;
     }
 
-    div[id="sfmenu"] p ~ p {
+    div:nth-child(1) p ~ p {
         display: none;
     }
 
-    div[id="sfmenu"] div ~ form{
+    div:nth-child(1) div ~ form{
         display: none;
     }
+
+    p[id="float"]{
+    float: left;
+}
 }
 
 
@@ -466,32 +519,45 @@ footer img{
 
 
 
+
+img[src="images/downlbutton.svg"]{
+    max-height: 2em;
+    width: 2em;
+    float: right!important;
+    border-bottom-style: solid;
+    border-bottom-color: #f5c300;
+}
+
+div[class="bericht"] + p{
+    margin-left: 1em;
+}
+
+
+
 /* micro interactie pop up bij downloaden */
 
+
 .bericht {
-  position: relative;
-  display: inline-block;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+    position: relative;
+    float: right;
+    display: inline-block;
+    cursor: pointer;
+    margin-right: 1.5em;
 }
 
 /* The actual popup */
 .bericht .berichttekst {
+  border-radius: 0.3em;
   visibility: hidden;
   width: 14em;
-  background-color: #555;
+  background-color: #f5c300;
   color: #fff;
   text-align: center;
-  border-radius: 0.3em;
   padding: 0.5em;
   position: absolute;
   z-index: 1;
   bottom: 125%;
-  left: 25%;
-  margin-left: -80px;
+  margin-left: -11em;
 }
 
 /* Popup arrow */
@@ -499,10 +565,10 @@ footer img{
   content: "";
   position: absolute;
   top: 100%;
-  left: 50%;
+  left: 78%;
   border-width: 5px;
   border-style: solid;
-  border-color: #555 transparent transparent transparent;
+  border-color: #f5c300 transparent transparent transparent;
 }
 
 /* Toggle this class - hide and show the popup */
@@ -512,11 +578,6 @@ footer img{
   animation: fadeIn 1s;
 }
 
-/* Add animation (fade in the popup) */
-@-webkit-keyframes fadeIn {
-  from {opacity: 0;}
-  to {opacity: 1;}
-}
 
 @keyframes fadeIn {
   from {opacity: 0;}
@@ -549,4 +610,34 @@ main > div[id="wowvandaag"]:hover [id="blur2"]{
     transition: 600ms;
 }
 
+section[id="blur2"] a + p{
+    text-align: right;
+    opacity: 0.9;
+    padding-right: 1em;
+}
 
+
+
+
+
+
+
+
+
+
+
+img[src="images/ericverhaal.png"]{
+    width: 100%;
+    height: 35em!important;
+}
+
+div[id="mainverhaal"]{
+    width: 110%!important;
+    margin-left: -1.1em;
+}
+
+a[href="WOW%20stories.html"] p{
+    margin-left: 1em;
+    color: black;
+    z-index: 2;
+}

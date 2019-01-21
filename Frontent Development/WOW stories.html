@@ -13,15 +13,15 @@
 <body>
     <header>
         <nav>
-            <div>
-                <a href="https://wowair.nl/manage/">
-        <img src="images/inloggen.svg" alt="Inlogknop">
-        </a>
-            </div>
+            <a href="inlogscherm.html" class='inlog'></a>
 
-            <a href="https://wowair.nl/?gclid=EAIaIQobChMIp9O46aX33gIVBOR3Ch3xogZtEAAYASAAEgISwvD_BwE"> <img src="images/sitelogo.svg" alt="Logo"></a>
+            <a href="WOW%20stories.html">
+            <img src="images/sitelogo.svg" alt="Logo">
+            </a>
 
-            <img class="zoekImg" src="images/zoeken.svg" alt="Inlogknop">
+            <a class='zoekImg'></a>
+
+
         </nav>
 
     </header>
@@ -33,8 +33,7 @@
         </form>
 
         <div id="wowvandaag">
-            <img id="blur" src="images/lepra.svg" alt="Verhaal van de dag">
-
+            <img id="blur" src="images/ericverhaal.png" alt="Verhaal van de dag">
             <div>
                 <section id="blur2">
                     <h1>
@@ -46,10 +45,13 @@
                             <span>Verhaal van de dag:</span> "Presentator die ten onrechte denkt aansluiting te hebben gevonden bij de 'kids'"</h4>
                     </div>
                 </section>
+                <a href="verhaal.html">
+                    <p id="float"> Lees meer > </p>
+                </a>
             </div>
         </div>
 
-        <div id="sfmenu">
+        <div>
             <section>
                 <div>
                     <h2>Sorteren</h2>
@@ -68,21 +70,21 @@
                 <div>
                     <h2>Filteren</h2>
                     <p>Tekstvorm</p>
-                    <div>
-                        <label> Dialoog (25) <input type="checkbox" name="tekstvorm" value="dialoog"></label>
+                    <form>
+                        <label> Dialoog (25) <input type="checkbox" name="tekstvorm" value="dialoog" required></label>
                         <label> Gedicht (15) <input type="checkbox" name="tekstvorm" value="gedicht" ></label>
 
                         <label> Haiku (1) <input type="checkbox" name="tekstvorm" value="haiku"></label>
                         <label> Verhaal (58) <input type="checkbox" name="tekstvorm" value="verhaal"></label>
-                    </div>
+                    </form>
 
                     <p>Onderwerp</p>
-                    <div>
+                    <form>
                         <label> Emotie (16) <input type="checkbox" name="tekstvorm" value="dialoog"></label>
                         <label> Object (34) <input type="checkbox" name="tekstvorm" value="gedicht" ></label>
                         <label> Persoon (27) <input type="checkbox" name="tekstvorm" value="haiku"></label>
                         <label> Situatie (22) <input type="checkbox" name="tekstvorm" value="verhaal"></label>
-                    </div>
+                    </form>
 
 
                     <p>Schrijfstijl</p>
@@ -98,15 +100,11 @@
                 <option value="Zweverig">Zweverig (3)</option>
                 </select>
                     </form>
-
-                    <input type="image" src="images/zoeken1.svg" alt="Zoekknop">
+                    <input id="zoekknop" type="submit" value="Zoeken  >">
                 </div>
             </section>
         </div>
 
-        <div class="bericht" onclick="myFunction()">Downloadbutton
-            <span class="berichttekst" id="myPopup">Vergeet mij niet op andere devices te downloaden</span>
-        </div>
 
 
         <section>
@@ -117,71 +115,109 @@
                 <article>
                     <img src="images/breed.svg" alt="">
                     <h5>Alzheimer</h5>
+
+                    <div class="bericht" onclick="downloadFunction()"> <img src="images/downlbutton.svg" alt="downloadknop">
+                        <span class="berichttekst" id="mijnPopup">Vergeet mij niet op je andere devices te downloaden!</span>
+                    </div>
                     <p> #Verward #Dialoog #Situatie </p>
                 </article>
 
                 <article>
                     <img src="images/eenzaam.svg" alt="">
                     <h5>Eenzaam</h5>
+                    <div class="bericht" onclick="downloadFunction()"> <img src="images/downlbutton.svg" alt="downloadknop">
+                        <span class="berichttekst" class="mijnPopup2">Vergeet mij niet op je andere devices te downloaden!</span>
+                    </div>
                     <p> #Verdriet #Verhaal #Persoon </p>
                 </article>
 
                 <article>
                     <img src="images/overdreven.svg" alt="">
                     <h5>Overdreven</h5>
+                    <div class="bericht" onclick="downloadFunction()"> <img src="images/downlbutton.svg" alt="downloadknop">
+                        <span class="berichttekst" class="mijnPopup">Vergeet mij niet op je andere devices te downloaden!</span>
+                    </div>
                     <p> #Blijdschap #Verhaal #Situatie </p>
                 </article>
+
                 <article>
                     <img src="images/breed.svg" alt="">
                     <h5>Presentator die ten onrechte denkt aansluiting te hebben gevonden bij de 'kids'</h5>
+                    <div class="bericht" onclick="downloadFunction()"> <img src="images/downlbutton.svg" alt="downloadknop">
+                        <span class="berichttekst" class="mijnPopup">Vergeet mij niet op je andere devices te downloaden!</span>
+                    </div>
                     <p> #Verward #Dialoog #Situatie </p>
                 </article>
 
                 <article>
                     <img src="images/eenzaam.svg" alt="">
                     <h5>Eenzaam</h5>
+                    <div class="bericht" onclick="downloadFunction()"> <img src="images/downlbutton.svg" alt="downloadknop">
+                        <span class="berichttekst" class="mijnPopup">Vergeet mij niet op je andere devices te downloaden!</span>
+                    </div>
                     <p> #Verdriet #Verhaal #Persoon </p>
                 </article>
 
                 <article>
                     <img src="images/overdreven.svg" alt="">
                     <h5>Overdreven</h5>
+                    <div class="bericht" onclick="downloadFunction()"> <img src="images/downlbutton.svg" alt="downloadknop">
+                        <span class="berichttekst" class="mijnPopup">Vergeet mij niet op je andere devices te downloaden!</span>
+                    </div>
                     <p> #Blijdschap #Verhaal #Situatie </p>
                 </article>
 
                 <article>
                     <img src="images/breed.svg" alt="">
                     <h5>Alzheimer</h5>
+                    <div class="bericht" onclick="downloadFunction()"> <img src="images/downlbutton.svg" alt="downloadknop">
+                        <span class="berichttekst" class="mijnPopup">Vergeet mij niet op je andere devices te downloaden!</span>
+                    </div>
                     <p> #Verward #Dialoog #Situatie </p>
                 </article>
 
                 <article>
                     <img src="images/eenzaam.svg" alt="">
                     <h5>Eenzaam</h5>
+                    <div class="bericht" onclick="downloadFunction()"> <img src="images/downlbutton.svg" alt="downloadknop">
+                        <span class="berichttekst" class="mijnPopup">Vergeet mij niet op je andere devices te downloaden!</span>
+                    </div>
                     <p> #Verdriet #Verhaal #Persoon </p>
                 </article>
 
                 <article>
                     <img src="images/overdreven.svg" alt="">
                     <h5>Overdreven</h5>
+                    <div class="bericht" onclick="downloadFunction()"> <img src="images/downlbutton.svg" alt="downloadknop">
+                        <span class="berichttekst" class="mijnPopup">Vergeet mij niet op je andere devices te downloaden!</span>
+                    </div>
                     <p> #Blijdschap #Verhaal #Situatie </p>
                 </article>
 
                 <article>
                     <img src="images/breed.svg" alt="">
                     <h5>Alzheimer</h5>
+                    <div class="bericht" onclick="downloadFunction()"> <img src="images/downlbutton.svg" alt="downloadknop">
+                        <span class="berichttekst" class="mijnPopup">Vergeet mij niet op je andere devices te downloaden!</span>
+                    </div>
                     <p> #Verward #Dialoog #Situatie </p>
                 </article>
 
                 <article>
                     <img src="images/eenzaam.svg" alt="">
                     <h5>Eenzaam</h5>
+                    <div class="bericht" onclick="downloadFunction()"> <img src="images/downlbutton.svg" alt="downloadknop">
+                        <span class="berichttekst" class="mijnPopup">Vergeet mij niet op je andere devices te downloaden!</span>
+                    </div>
                     <p> #Verdriet #Verhaal #Persoon </p>
                 </article>
 
                 <article>
                     <img src="images/overdreven.svg" alt="">
                     <h5>Overdreven</h5>
+                    <div class="bericht" onclick="downloadFunction()"> <img src="images/downlbutton.svg" alt="downloadknop">
+                        <span class="berichttekst" class="mijnPopup">Vergeet mij niet op je andere devices te downloaden!</span>
+                    </div>
                     <p> #Blijdschap #Verhaal #Situatie </p>
                 </article>
             </div>
