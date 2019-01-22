@@ -6,7 +6,7 @@ body {
 }
 
 main {
-    margin-top: 4.5em;
+    margin-top: 4.8em;
 }
 
 
@@ -21,6 +21,24 @@ main > span {
     text-align: left;
 }
 
+
+h1 {
+    font-family: sans-serif;
+    font-weight: 600;
+    margin: 2em 1em 1em 1em;
+    text-align: left;
+    font-size: 1.2em;
+    padding-top: 0.5em;
+}
+
+
+h1 span {
+    display: inline;
+    font-size: 0.9em;
+    font-family: "Work sans"
+}
+
+
 h2 {
     background-color: #a22384;
     color: white;
@@ -31,27 +49,10 @@ h2 {
 }
 
 h3 {
-    font-family: sans-serif;
-    font-weight: 600;
-    margin: 2em 1em 1em 1em;
-    text-align: left;
-}
-
-
-h4 span {
-    display: inline;
-    font-family: sans-serif;
-    font-weight: 500;
-}
-
-h5 {
     font-size: 1.5em;
     margin: 0.5em 0em -0.5em 0.7em;
 }
 
-h5 + p {
-    margin-left: 1em;
-}
 
 p {
     font-weight: 600;
@@ -251,9 +252,10 @@ fieldset section {
 input {
     float: right;
     margin-left: auto;
+    display: block;
 }
 
-input:last-of-type {
+input[type="submit"]{
     background-color: gray;
     color: #fff;
     border-radius: 0.2em;
@@ -266,12 +268,64 @@ input:last-of-type {
     font-weight: 300;
 }
 
-form:valid input {
+form:valid input[type="submit"]{
     background-color: #a22384;
 }
 
 
+form[action="/login"] label{
+    background-color: white;
+    border: none;
+    padding: 0.8em 0.8em;
+    text-align: left;
+    display: grid;
+    width: 40%;
+}
 
+
+input[name="password"]{
+    margin-top: 0.4em;
+    border-color: gainsboro;
+    border-radius: 0.15em;
+    border-style: solid;
+    border-width: 0.06em;
+    font-family: "Helvetica Neue";
+    font-size: 0.85em;
+    font-weight: 300;
+    margin: 0.5em;
+    padding: 0.8em 0.8em;
+    text-align: left;
+    width: 18em;
+}
+
+input[name="email"]{
+    margin-top: 0.4em;
+    border-color: gainsboro;
+    border-radius: 0.15em;
+    border-style: solid;
+    border-width: 0.06em;
+    font-family: "Helvetica Neue";
+    font-size: 0.85em;
+    font-weight: 300;
+    margin: 0.5em;
+    padding: 0.8em 0.8em;
+    text-align: left;
+    width: 18em;
+}
+
+form[action="/login"]{
+    margin-left: 15%;
+}
+
+
+input:focus{
+    outline: 0.2em solid #a22384;
+}
+
+
+input[type="checkbox"]{
+    opacity: 0.7;
+}
 
 
 
@@ -346,6 +400,11 @@ a:visited {
 
 
 
+
+
+
+
+
 /* opmaak van de verhalen */
 
 main article img {
@@ -360,6 +419,14 @@ article {
     margin: 1em;
     text-align: left;
 }
+
+
+article:hover {
+    margin-left: -0.1em;
+    width: 100.3%;
+}
+
+
 
 
 
@@ -399,12 +466,6 @@ footer img {
     main > section div {
         display: grid;
         grid-template-columns: 1fr 1fr;
-    }
-
-
-    article:hover {
-        margin-left: -0.1em;
-        width: 100.5%;
     }
 
     main section:nth-child(4) {
@@ -447,10 +508,6 @@ footer img {
         width: 38em;
     }
 
-    div section h4:hover {
-        opacity: 0.5;
-    }
-
 
     main section:nth-child(4) {
         margin-left: 1em;
@@ -462,11 +519,6 @@ footer img {
         padding-left: 34em;
     }
 
-    main section h4 {
-        font-size: 1.3em;
-        margin-left: 0em;
-        margin-top: -0.5em;
-    }
 
     main section h1 {
         font-size: 220%;
